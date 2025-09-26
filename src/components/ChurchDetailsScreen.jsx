@@ -38,12 +38,20 @@ export function ChurchDetailsScreen({ church, onNavigate, onToggleFavorite }) {
         </button>
       </div>
 
-      {/* Church Photo Placeholder */}
-      <div className="bg-gradient-to-br from-blue-100 to-blue-200 h-32 flex items-center justify-center border-b">
-        <div className="text-center">
-          <span className="text-4xl">⛪</span>
-          <p className="text-gray-500 text-xs mt-2">[Church Photo]</p>
-        </div>
+      {/* Church Photo */}
+      <div className="h-48 flex items-center justify-center border-b bg-gray-100 overflow-hidden">
+        {church.image ? (
+          <img 
+            src={church.image} 
+            alt={church.name}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="text-center">
+            <span className="text-6xl">⛪</span>
+            <p className="text-gray-500 text-xs mt-2">[Church Photo]</p>
+          </div>
+        )}
       </div>
 
       {/* Church Details */}
@@ -80,6 +88,17 @@ export function ChurchDetailsScreen({ church, onNavigate, onToggleFavorite }) {
             {church.website}
           </a>
         </div>
+
+        {church.accessibility && church.accessibility.length > 0 && (
+          <div className="mt-6">
+            <h3 className="text-base font-bold text-gray-800 mb-2">♿ Accessibility</h3>
+            {church.accessibility.map((feature, index) => (
+              <p key={index} className="text-sm text-gray-700 mt-1">
+                • {feature}
+              </p>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Action Buttons */}
