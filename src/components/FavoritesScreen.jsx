@@ -43,7 +43,7 @@ export function FavoritesScreen({ churches, onNavigate, onToggleFavorite }) {
                 <div className="flex-1">
                   <h3 className="font-bold text-base text-gray-900">{church.name}</h3>
                   <p className="text-sm text-gray-600 mt-1">
-                    {church.distance} • <span className={church.status === 'Open' ? 'text-green-600' : 'text-red-600'}>{church.status}</span>
+                    {church.distance} • <span className={church.status === 'Open' ? 'text-green-700' : 'text-red-600'}>{church.status}</span>
                   </p>
                   <p className="text-sm text-gray-600 mt-1">{church.address}</p>
                   <p className="text-sm text-gray-500 mt-1">
