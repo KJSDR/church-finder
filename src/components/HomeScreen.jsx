@@ -49,24 +49,24 @@ export function HomeScreen({ churches, searchLocation, onSearchLocationChange, o
       <div className="px-4 py-3 flex gap-2 bg-white border-b">
         <button
           onClick={() => onNavigate('filters')}
-          className="px-5 py-2 border-2 border-blue-500 text-blue-500 rounded-full text-sm font-medium hover:bg-blue-50 transition"
+          className="px-5 py-2 border-2 border-blue-700 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-50 transition"
         >
           Filters
         </button>
-        <button className="px-5 py-2 bg-blue-500 text-white rounded-full text-sm font-medium">
+        <button className="px-5 py-2 bg-blue-700 text-white rounded-full text-sm font-medium">
           Map
         </button>
         <button
           onClick={() => onNavigate('list')}
-          className="px-5 py-2 border-2 border-gray-300 text-gray-600 rounded-full text-sm font-medium hover:bg-gray-50 transition"
+          className="px-5 py-2 border-2 border-gray-700 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-50 transition"
         >
           List
         </button>
         <button
           onClick={() => onNavigate('favorites')}
-          className="px-5 py-2 border-2 border-gray-300 text-gray-600 rounded-full text-sm font-medium hover:bg-gray-50 transition"
+          className="px-5 py-2 border-2 border-gray-700 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-50 transition"
         >
-          ❤️ Favorites
+           Favorites
         </button>
       </div>
 
