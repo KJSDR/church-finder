@@ -61,32 +61,38 @@ export function HomeScreen({ churches, searchLocation, onSearchLocationChange, o
 
         {/* Church pins */}
         <div className="relative h-full w-full">
-          {churches.map((church, index) => (
-            <button
-              key={church.id}
-              onClick={() => onNavigate('details', church)}
-              className="absolute group"
-              style={{
-                left: `${25 + (index * 13) % 60}%`,
-                top: `${25 + (index * 17) % 55}%`,
-              }}
-            >
-              {/* Pin */}
-              <div className="relative">
-                <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center transform transition-transform group-hover:scale-125 shadow-lg border-2 border-white">
-                  <span className="text-white text-xs">⛪</span>
+          {churches && churches.length > 0 ? (
+            churches.map((church, index) => (
+              <button
+                key={church.id}
+                onClick={() => onNavigate('details', church)}
+                className="absolute group z-10"
+                style={{
+                  left: `${25 + (index * 13) % 60}%`,
+                  top: `${25 + (index * 17) % 55}%`,
+                }}
+              >
+                {/* Pin */}
+                <div className="relative">
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center transform transition-transform group-hover:scale-125 shadow-lg border-2 border-white">
+                    <span className="text-white text-base">📍</span>
+                  </div>
+                  {/* Pin shadow */}
+                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-black/30 rounded-full blur-sm"></div>
+                  
+                  {/* Hover tooltip */}
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
+                    {church.name}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+                  </div>
                 </div>
-                {/* Pin shadow */}
-                <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-3 h-1 bg-black/20 rounded-full blur-sm"></div>
-                
-                {/* Hover tooltip */}
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                  {church.name}
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
-                </div>
-              </div>
-            </button>
-          ))}
+              </button>
+            ))
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="text-gray-400 text-sm">Loading churches...</p>
+            </div>
+          )}
         </div>
 
         {/* Results counter */}
