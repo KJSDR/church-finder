@@ -15,6 +15,7 @@
           "Sunday 6:00 PM",
           "Wednesday 12:10 PM"
         ],
+        "accessibility": ["Wheelchair Access"],
         "coordinates": { "lat": 37.7922, "lng": -122.4079 },
         "isFavorite": false
       },
@@ -31,6 +32,7 @@
           "Sunday 8:30 AM",
           "Sunday 11:00 AM"
         ],
+        "accessibility": ["Wheelchair Access", "ASL Interpretation"],
         "coordinates": { "lat": 37.7916, "lng": -122.4129 },
         "isFavorite": true
       },
@@ -45,8 +47,10 @@
         "status": "Open",
         "serviceTimes": [
           "Sunday 9:00 AM",
-          "Sunday 11:00 AM"
+          "Sunday 11:00 AM",
+          "Thursday 7:00 PM"
         ],
+        "accessibility": [],
         "coordinates": { "lat": 37.7933, "lng": -122.4055 },
         "isFavorite": false
       },
@@ -61,8 +65,10 @@
         "status": "Open",
         "serviceTimes": [
           "Sunday 9:00 AM",
-          "Sunday 11:00 AM"
+          "Sunday 11:00 AM",
+          "Sunday 7:00 PM"
         ],
+        "accessibility": ["Wheelchair Access", "ASL Interpretation"],
         "coordinates": { "lat": 37.7851, "lng": -122.4125 },
         "isFavorite": false
       },
@@ -81,6 +87,7 @@
           "Sunday 9:00 AM",
           "Sunday 11:00 AM"
         ],
+        "accessibility": ["Wheelchair Access"],
         "coordinates": { "lat": 37.8008, "lng": -122.4102 },
         "isFavorite": false
       },
@@ -94,8 +101,10 @@
         "distance": "0.6 mi",
         "status": "Open",
         "serviceTimes": [
-          "Sunday 10:00 AM"
+          "Sunday 10:00 AM",
+          "Wednesday 6:30 PM"
         ],
+        "accessibility": [],
         "coordinates": { "lat": 37.7889, "lng": -122.4116 },
         "isFavorite": false
       },
@@ -112,6 +121,7 @@
           "Saturday 6:00 PM",
           "Sunday 10:00 AM"
         ],
+        "accessibility": ["Wheelchair Access"],
         "coordinates": { "lat": 37.7980, "lng": -122.4267 },
         "isFavorite": false
       },
@@ -129,7 +139,131 @@
           "Sunday 11:00 AM",
           "Sunday 5:00 PM"
         ],
+        "accessibility": ["Wheelchair Access", "ASL Interpretation"],
         "coordinates": { "lat": 37.7885, "lng": -122.4467 },
+        "isFavorite": false
+      },
+      {
+        "id": "9",
+        "name": "Calvary Presbyterian Church",
+        "denomination": "Presbyterian",
+        "address": "2515 Fillmore St, San Francisco, CA 94115",
+        "phone": "(415) 346-3832",
+        "website": "www.calvarypresbyterian.org",
+        "distance": "1.8 mi",
+        "status": "Open",
+        "serviceTimes": [
+          "Sunday 10:00 AM",
+          "Sunday 6:00 PM"
+        ],
+        "accessibility": ["Wheelchair Access"],
+        "coordinates": { "lat": 37.7933, "lng": -122.4342 },
+        "isFavorite": false
+      },
+      {
+        "id": "10",
+        "name": "Mission Dolores Basilica",
+        "denomination": "Catholic",
+        "address": "3321 16th St, San Francisco, CA 94114",
+        "phone": "(415) 621-8203",
+        "website": "www.missiondolores.org",
+        "distance": "2.5 mi",
+        "status": "Open",
+        "serviceTimes": [
+          "Saturday 5:00 PM",
+          "Sunday 8:00 AM",
+          "Sunday 10:00 AM",
+          "Sunday 12:00 PM"
+        ],
+        "accessibility": [],
+        "coordinates": { "lat": 37.7642, "lng": -122.4267 },
+        "isFavorite": false
+      },
+      {
+        "id": "11",
+        "name": "St. John's Lutheran Church",
+        "denomination": "Lutheran",
+        "address": "1466 Clay St, San Francisco, CA 94109",
+        "phone": "(415) 567-2734",
+        "website": "www.stjohnssf.org",
+        "distance": "0.9 mi",
+        "status": "Open",
+        "serviceTimes": [
+          "Sunday 11:00 AM",
+          "Tuesday 12:15 PM"
+        ],
+        "accessibility": ["Wheelchair Access", "ASL Interpretation"],
+        "coordinates": { "lat": 37.7913, "lng": -122.4195 },
+        "isFavorite": false
+      },
+      {
+        "id": "12",
+        "name": "Bethel AME Church",
+        "denomination": "African Methodist Episcopal",
+        "address": "2882 Bush St, San Francisco, CA 94115",
+        "phone": "(415) 567-1144",
+        "website": "www.bethelsf.org",
+        "distance": "1.6 mi",
+        "status": "Closed",
+        "serviceTimes": [
+          "Sunday 8:00 AM",
+          "Sunday 11:00 AM"
+        ],
+        "accessibility": ["Wheelchair Access"],
+        "coordinates": { "lat": 37.7880, "lng": -122.4378 },
+        "isFavorite": false
+      },
+      {
+        "id": "13",
+        "name": "Hamilton Square Baptist Church",
+        "denomination": "Baptist",
+        "address": "1212 Geary Blvd, San Francisco, CA 94109",
+        "phone": "(415) 931-4343",
+        "website": "www.hamiltonsquarebaptist.org",
+        "distance": "1.3 mi",
+        "status": "Open",
+        "serviceTimes": [
+          "Sunday 10:30 AM",
+          "Sunday 6:00 PM",
+          "Wednesday 7:00 PM"
+        ],
+        "accessibility": [],
+        "coordinates": { "lat": 37.7854, "lng": -122.4242 },
+        "isFavorite": false
+      },
+      {
+        "id": "14",
+        "name": "Seventh Day Adventist Church",
+        "denomination": "Adventist",
+        "address": "1620 Fell St, San Francisco, CA 94117",
+        "phone": "(415) 863-2070",
+        "website": "www.sfadventist.org",
+        "distance": "2.3 mi",
+        "status": "Open",
+        "serviceTimes": [
+          "Saturday 11:00 AM",
+          "Saturday 2:00 PM"
+        ],
+        "accessibility": ["Wheelchair Access"],
+        "coordinates": { "lat": 37.7733, "lng": -122.4467 },
+        "isFavorite": false
+      },
+      {
+        "id": "15",
+        "name": "New Life Community Church",
+        "denomination": "Non-denominational",
+        "address": "1591 Sutter St, San Francisco, CA 94109",
+        "phone": "(415) 922-1010",
+        "website": "www.newlifesf.org",
+        "distance": "1.1 mi",
+        "status": "Open",
+        "serviceTimes": [
+          "Sunday 9:30 AM",
+          "Sunday 11:30 AM",
+          "Friday 7:00 PM"
+        ],
+        "accessibility": ["Wheelchair Access", "ASL Interpretation"],
+        "coordinates": { "lat": 37.7877, "lng": -122.4222 },
         "isFavorite": false
       }
     ]
