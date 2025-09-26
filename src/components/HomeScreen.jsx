@@ -43,15 +43,17 @@ export function HomeScreen({ churches, searchLocation, onSearchLocationChange, o
         </button>
       </div>
 
-      {/* Simple Map Area with CSS */}
-      <div className="flex-1 m-4 bg-gradient-to-br from-blue-100 via-blue-50 to-green-50 rounded-lg relative overflow-hidden shadow-inner border border-gray-200">
-        {/* Map grid lines for effect */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="grid grid-cols-6 grid-rows-6 h-full w-full">
-            {[...Array(36)].map((_, i) => (
-              <div key={i} className="border border-gray-300"></div>
-            ))}
-          </div>
+      {/* Map Area with Background Image */}
+      <div className="flex-1 m-4 rounded-lg relative overflow-hidden shadow-lg border-2 border-gray-300">
+        {/* Map background - replace with actual map image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://raw.githubusercontent.com/shvam0000/Google-Maps-Clone/main/Mockup%20images/ss-1.PNG')`
+          }}
+        >
+          {/* Optional overlay to make pins stand out more */}
+          <div className="absolute inset-0 bg-white/10"></div>
         </div>
 
         {/* Map label */}
