@@ -1,6 +1,24 @@
 import React from 'react';
 
 export function HomeScreen({ churches, searchLocation, onSearchLocationChange, onNavigate }) {
+  const handleGetLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          // Update search location with coordinates or "Current Location"
+          onSearchLocationChange(`Current Location (${latitude.toFixed(4)}, ${longitude.toFixed(4)})`);
+        },
+        (error) => {
+          alert('Unable to get your location. Please enter manually.');
+          console.error('Geolocation error:', error);
+        }
+      );
+    } else {
+      alert('Geolocation is not supported by your browser.');
+    }
+  };
+
   return (
     <div className="h-full flex flex-col">
       {/* Header */}
@@ -18,7 +36,10 @@ export function HomeScreen({ churches, searchLocation, onSearchLocationChange, o
             placeholder="Enter location or use current"
             className="w-full p-3 pr-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <button className="absolute right-3 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+          <button 
+            onClick={handleGetLocation}
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition"
+          >
             <span className="text-white text-sm">📍</span>
           </button>
         </div>
@@ -40,6 +61,12 @@ export function HomeScreen({ churches, searchLocation, onSearchLocationChange, o
           className="px-5 py-2 border-2 border-gray-300 text-gray-600 rounded-full text-sm font-medium hover:bg-gray-50 transition"
         >
           List
+        </button>
+        <button
+          onClick={() => onNavigate('favorites')}
+          className="px-5 py-2 border-2 border-gray-300 text-gray-600 rounded-full text-sm font-medium hover:bg-gray-50 transition"
+        >
+          ❤️ Favorites
         </button>
       </div>
 

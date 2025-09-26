@@ -3,6 +3,7 @@ import { HomeScreen } from "./components/HomeScreen";
 import { FiltersScreen } from "./components/FiltersScreen";
 import { ListViewScreen } from "./components/ListViewScreen";
 import { ChurchDetailsScreen } from "./components/ChurchDetailsScreen";
+import { FavoritesScreen } from "./components/FavoritesScreen";
 import churchesData from "./data/churches.json";
 
 export default function App() {
@@ -60,6 +61,15 @@ export default function App() {
       });
     }
 
+    // Filter by accessibility
+    if (filters.accessibility.length > 0) {
+      filtered = filtered.filter(church => {
+        return filters.accessibility.every(accessFilter => 
+          church.accessibility && church.accessibility.includes(accessFilter)
+        );
+      });
+    }
+
     setFilteredChurches(filtered);
   }, [filters, churches]);
 
@@ -108,6 +118,14 @@ export default function App() {
         return (
           <ListViewScreen
             churches={filteredChurches}
+            onNavigate={navigateToScreen}
+            onToggleFavorite={toggleFavorite}
+          />
+        );
+      case "favorites":
+        return (
+          <FavoritesScreen
+            churches={churches}
             onNavigate={navigateToScreen}
             onToggleFavorite={toggleFavorite}
           />
