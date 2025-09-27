@@ -24,7 +24,7 @@ export function FiltersScreen({ filters, onFiltersChange, onNavigate }) {
       <div className="flex-1 overflow-y-auto p-4">
         {/* Denomination */}
         <div className="mb-6">
-          <h3 className="font-bold mb-3 text-gray-800">Denomination</h3>
+          <h2 className="font-bold mb-3 text-gray-800">Denomination</h2>
           {['Catholic', 'Protestant', 'Orthodox', 'Non-denominational', 'Episcopal', 'Methodist', 'Baptist', 'Presbyterian', 'Lutheran', 'African Methodist Episcopal', 'Adventist'].map(denom => (
             <label key={denom} className="flex items-center mb-3 cursor-pointer">
               <input
@@ -42,7 +42,7 @@ export function FiltersScreen({ filters, onFiltersChange, onNavigate }) {
 
         {/* Service Times */}
         <div className="mb-6">
-          <h3 className="font-bold mb-3 text-gray-800">Service Times</h3>
+          <h2 className="font-bold mb-3 text-gray-800">Service Times</h2>
           {['Sunday Morning', 'Sunday Evening', 'Weekday Services'].map(time => (
             <label key={time} className="flex items-center mb-3 cursor-pointer">
               <input
@@ -60,7 +60,7 @@ export function FiltersScreen({ filters, onFiltersChange, onNavigate }) {
 
         {/* Accessibility */}
         <div className="mb-6">
-          <h3 className="font-bold mb-3 text-gray-800">Accessibility</h3>
+          <h2 className="font-bold mb-3 text-gray-800">Accessibility</h2>
           {['Wheelchair Access', 'ASL Interpretation'].map(access => (
             <label key={access} className="flex items-center mb-3 cursor-pointer">
               <input
