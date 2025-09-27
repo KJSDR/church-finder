@@ -15,15 +15,9 @@ export function FiltersScreen({ filters, onFiltersChange, onNavigate }) {
 
   return (
     <div className="h-full flex flex-col">
-      {/* Header */}
-      <div className="bg-blue-600 text-white p-4 shadow-md flex items-center">
-        <button
-          onClick={() => onNavigate('home')}
-          className="text-white mr-4 text-xl"
-        >
-          ← 
-        </button>
-        <h1 className="text-xl font-bold">Filters</h1>
+      {/* Header - Always Visible */}
+      <div className="bg-blue-600 text-white p-4 shadow-md">
+        <h1 className="text-xl font-bold text-center">Church Finder</h1>
       </div>
 
       {/* Filter Options */}
@@ -31,7 +25,7 @@ export function FiltersScreen({ filters, onFiltersChange, onNavigate }) {
         {/* Denomination */}
         <div className="mb-6">
           <h3 className="font-bold mb-3 text-gray-800">Denomination</h3>
-          {['Catholic', 'Protestant', 'Orthodox', 'Non-denominational', 'Episcopal', 'Methodist', 'Baptist'].map(denom => (
+          {['Catholic', 'Protestant', 'Orthodox', 'Non-denominational', 'Episcopal', 'Methodist', 'Baptist', 'Presbyterian', 'Lutheran', 'African Methodist Episcopal', 'Adventist'].map(denom => (
             <label key={denom} className="flex items-center mb-3 cursor-pointer">
               <input
                 type="checkbox"
@@ -81,13 +75,28 @@ export function FiltersScreen({ filters, onFiltersChange, onNavigate }) {
         </div>
       </div>
 
-      {/* Apply Button */}
-      <div className="p-4 border-t bg-white">
+      {/* Bottom Navigation Bar - Always Visible */}
+      <div className="px-4 py-3 flex gap-2 bg-white border-t">
+        <button className="flex-1 px-5 py-2 border-2 border-blue-700 bg-blue-700 text-white rounded-full text-sm font-medium">
+          Filters
+        </button>
         <button
           onClick={() => onNavigate('home')}
-          className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition"
+          className="flex-1 px-5 py-2 border-2 border-blue-700 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-50 transition"
         >
-          Apply Filters
+          Map
+        </button>
+        <button
+          onClick={() => onNavigate('list')}
+          className="flex-1 px-5 py-2 border-2 border-blue-700 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-50 transition"
+        >
+          List
+        </button>
+        <button
+          onClick={() => onNavigate('favorites')}
+          className="flex-1 px-5 py-2 border-2 border-blue-700 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-50 transition"
+        >
+          Favorites
         </button>
       </div>
     </div>

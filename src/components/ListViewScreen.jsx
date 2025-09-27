@@ -3,15 +3,9 @@ import React from 'react';
 export function ListViewScreen({ churches, onNavigate, onToggleFavorite }) {
   return (
     <div className="h-full flex flex-col">
-      {/* Header */}
-      <div className="bg-blue-600 text-white p-4 shadow-md flex items-center">
-        <button
-          onClick={() => onNavigate('home')}
-          className="text-white mr-4 text-xl"
-        >
-          ←
-        </button>
-        <h1 className="text-xl font-bold">Nearby Churches</h1>
+      {/* Header - Always Visible */}
+      <div className="bg-blue-600 text-white p-4 shadow-md">
+        <h1 className="text-xl font-bold text-center">Church Finder</h1>
       </div>
 
       {/* Church List */}
@@ -69,6 +63,31 @@ export function ListViewScreen({ churches, onNavigate, onToggleFavorite }) {
           </p>
         </div>
       )}
+
+      {/* Bottom Navigation Bar - Always Visible */}
+      <div className="px-4 py-3 flex gap-2 bg-white border-t">
+        <button
+          onClick={() => onNavigate('filters')}
+          className="flex-1 px-5 py-2 border-2 border-blue-700 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-50 transition"
+        >
+          Filters
+        </button>
+        <button
+          onClick={() => onNavigate('home')}
+          className="flex-1 px-5 py-2 border-2 border-blue-700 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-50 transition"
+        >
+          Map
+        </button>
+        <button className="flex-1 px-5 py-2 border-2 border-blue-700 bg-blue-700 text-white rounded-full text-sm font-medium">
+          List
+        </button>
+        <button
+          onClick={() => onNavigate('favorites')}
+          className="flex-1 px-5 py-2 border-2 border-blue-700 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-50 transition"
+        >
+          Favorites
+        </button>
+      </div>
     </div>
   );
 }
