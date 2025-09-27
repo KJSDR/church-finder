@@ -29,7 +29,7 @@ export function ListViewScreen({ churches, onNavigate, onToggleFavorite }) {
             >
               <div className="flex justify-between items-start">
                 <div className="flex-1">
-                  <h3 className="font-bold text-base text-gray-900">{church.name}</h3>
+                  <h2 className="font-bold text-base text-gray-900">{church.name}</h2>
                   <p className="text-sm text-gray-600 mt-1">
                     {church.distance} • <span className={church.status === 'Open' ? 'text-green-700' : 'text-red-600'}>{church.status}</span>
                   </p>
