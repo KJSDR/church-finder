@@ -3,4 +3,4 @@
 - FiltersScreen: 100
 - ListViewScreen: 100
 - ChurchDetailsScreen:
-- FavoritesScreen:
+- FavoritesScreen: 100
