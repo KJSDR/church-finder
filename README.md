@@ -2,5 +2,5 @@
 - HomeScreen: 100
 - FiltersScreen: 100
 - ListViewScreen: 100
-- ChurchDetailsScreen:
+- ChurchDetailsScreen: 100
 - FavoritesScreen: 100
