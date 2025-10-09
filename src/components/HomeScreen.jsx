@@ -49,7 +49,7 @@ export function HomeScreen({ churches, searchLocation, onSearchLocationChange, o
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://oobrien.com/wordpress/wp-content/uploads/2016/07/googlemaps_july2016.jpg')`
+            backgroundImage: `url('https://s.hdnux.com/photos/67/56/14/14607158/4/1920x0.jpg')`
           }}
         >
           <div className="absolute inset-0 bg-white/10"></div>
@@ -57,7 +57,7 @@ export function HomeScreen({ churches, searchLocation, onSearchLocationChange, o
 
         {/* Map label */}
         <div className="absolute top-3 left-3 bg-white px-3 py-1 rounded shadow-sm">
-          <p className="text-xs text-gray-600 font-medium">London, UK</p>
+          <p className="text-xs text-gray-600 font-medium">San Francisco, USA</p>
         </div>
 
         {/* Church pins */}
